@@ -1,0 +1,60 @@
+/* === BASE / GLOBAL === */
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY + TYPE */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fafafa;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* HEADINGS */
+h1, h2 {
+  font-weight: 700;
+  color: #00796b;
+}
+
+h1 {
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #004d40;
+}
+
+/* PARAGRAPHS */
+p {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* GENERIC BUTTON STYLE (can be reused) */
+.btn-primary {
+  background: #00796b;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #004d40;
+  transform: translateY(-2px);
+}
+
+html, body { overflow-x: hidden; }

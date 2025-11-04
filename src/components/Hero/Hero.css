@@ -1,0 +1,237 @@
+/* === HERO SECTION === */
+
+.hero {
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  animation: fadeIn 1.5s ease-in-out;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(135deg, #e8f5e8 0%, #f1f8e9 100%);
+  clip-path: polygon(0 100%, 25% 0%, 50% 100%, 75% 0%, 100% 100%);
+  z-index: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+/* IMAGE SIDE */
+.hero-image img {
+  width: 100%;
+  max-width: 550px;          /* ✅ keeps image reasonable size */
+  height: auto;
+  object-fit: contain;       /* ✅ ensures no cropping */
+  mix-blend-mode: soft-light;
+  opacity: 0.95;
+  filter: brightness(1.05) saturate(1);
+  transform: none;           /* ✅ remove shifting since we no longer need to force bleed */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1) saturate(1.1);
+}
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin-left: 0;
+}
+
+/* TEXT SIDE */
+.hero-text {
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  position: relative;
+  z-index: 3;
+  padding-right: 4vw;
+}
+
+/* TITLE */
+.hero-title {
+  font-size: clamp(60px, 10vw, 110px);
+  font-weight: 900;
+  color: rgba(34, 139, 34, 0.2);
+  text-transform: uppercase;
+  line-height: 0.85;
+  margin-bottom: 20px;
+  letter-spacing: -3px;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  animation: slideInFromLeft 1s ease-out 0.5s both;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-title:hover {
+  color: rgba(72, 187, 120, 0.8);
+  text-shadow: 0 4px 8px rgba(72, 187, 120, 0.3);
+  transform: scale(1.05);
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.8), rgba(255,255,255,0));
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+/* DESCRIPTION */
+.hero-desc {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.8);
+  max-width: 500px;
+  margin: 30px 0 40px;
+  line-height: 1.7;
+  font-weight: 400;
+  animation: slideInFromRight 1s ease-out 0.8s both;
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* DEPTH OVERLAY */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(34,139,34,0.08), transparent 60%);
+  z-index: 1;
+}
+
+/* CONTACT TRIGGER */
+.contact-trigger {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 200ms ease;
+}
+
+.contact-trigger:hover {
+  background-color: #333;
+}
+
+.contact-trigger:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-inner {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: clamp(40px, 15vw, 72px);
+    text-align: center;
+  }
+
+  .hero-text {
+    align-items: center;
+  }
+
+  .hero-image img {
+    width: 100%;
+    transform: none;
+    mix-blend-mode: normal;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 0 2vw;
+  }
+
+  .hero-inner {
+    gap: 30px;
+  }
+
+  .hero-title {
+    font-size: clamp(30px, 12vw, 60px);
+    margin-bottom: 10px;
+  }
+
+  .hero-desc {
+    font-size: 16px;
+    margin: 20px 0 30px;
+  }
+}
