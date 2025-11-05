@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
+  padding: 10px 20px;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   position: sticky;
@@ -12,7 +12,16 @@
   z-index: 10;
 }
 
-.navbar nav a {
+.logo {
+  height: 40px;
+  object-fit: contain;
+}
+
+.nav-links {
+  padding-right: 20px;
+}
+
+.nav-links a {
   margin: 0 15px;
   text-decoration: none;
   color: #333;
@@ -24,7 +33,7 @@
   overflow: hidden;
 }
 
-.navbar nav a::before {
+.nav-links a::before {
   content: '';
   position: absolute;
   top: 0;
@@ -35,13 +44,13 @@
   transition: left 0.5s ease;
 }
 
-.navbar nav a:hover {
+.nav-links a:hover {
   color: #48bb78;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(72, 187, 120, 0.2);
 }
 
-.navbar nav a:hover::before {
+.nav-links a:hover::before {
   left: 100%;
 }
 

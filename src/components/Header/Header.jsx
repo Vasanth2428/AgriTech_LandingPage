@@ -5,7 +5,7 @@ function Header() {
   return (
     <header className="navbar">
       <img src="/logo.png" alt="AdInner logo" className="logo" />
-      <nav>
+      <nav className="nav-links">
         <a href="/">Home</a>
         <a href="/">Services</a>
         <a href="/">About</a>
