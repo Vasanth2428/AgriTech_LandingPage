@@ -1,6 +1,52 @@
-# Getting Started with Create React App
+# AgriTech Landing Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive landing page for AgriTech solutions built with React.
+
+## Description
+
+This project is a landing page designed for an agricultural technology company. It features sections for header, hero, information, and contact modal to showcase AgriTech services and encourage user engagement.
+
+## Features
+
+- Responsive design optimized for all devices
+- Hero section with compelling call-to-action
+- Information sections highlighting key features
+- Contact modal for user inquiries
+- Built with React and modern CSS
+
+## Technologies Used
+
+- React 19.2.0
+- React DOM 19.2.0
+- React Scripts 5.0.1
+- CSS for styling
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version 14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd AgriTech_LandingPage
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Available Scripts
 
@@ -39,32 +85,53 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+AgriTech_LandingPage/
+├── public/
+│   ├── assets/
+│   │   ├── farmer.png
+│   │   ├── farmer.webp
+│   │   ├── illustration.png
+│   │   └── illustration.webp
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+├── src/
+│   ├── components/
+│   │   ├── ContactModal/
+│   │   │   ├── ContactModal.css
+│   │   │   └── ContactModal.jsx
+│   │   ├── Header/
+│   │   │   ├── Header.css
+│   │   │   └── Header.jsx
+│   │   ├── Hero/
+│   │   │   ├── Hero.css
+│   │   │   └── Hero.jsx
+│   │   ├── InfoSection/
+│   │   │   ├── InfoSection.css
+│   │   │   └── InfoSection.jsx
+│   │   └── Navbar/
+│   │       ├── Navbar.css
+│   │       └── Navbar.jsx
+│   ├── App.jsx
+│   ├── base.css
+│   ├── index.css
+│   └── index.js
+├── .gitignore
+├── package.json
+├── package-lock.json
+└── README.md
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Components
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Header**: Navigation and branding
+- **Hero**: Main call-to-action section
+- **InfoSection**: Detailed information about services
+- **ContactModal**: Contact form modal
+- **Navbar**: Navigation bar component
