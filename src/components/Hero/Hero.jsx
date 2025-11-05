@@ -24,11 +24,11 @@ function Hero() {
 
         {/* Right side text */}
         <div className="hero-text">
-          <h1 className="hero-title">Agritech</h1>
-          <p className="hero-desc">
+          <h1 className="hero-title">Agritech</h1><br></br>
+          <div className="hero-desc">
             Empowering farmers with innovative technology. We help you optimize yields,
             reduce costs, and build sustainable agricultural practices for a greener future.
-          </p>
+          </div>
           <a href="mailto:contact@agritech.com" className="btn-primary">Get Started</a>
         </div>
       </div>

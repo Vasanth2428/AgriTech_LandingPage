@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import './ContactModal.css';
 
 const ContactModal = ({ isOpen, onClose, triggerRef }) => {
@@ -43,7 +43,7 @@ const ContactModal = ({ isOpen, onClose, triggerRef }) => {
     onClose();
   };
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = useCallback((e) => {
     if (e.key === 'Escape') {
       onClose();
     }
@@ -60,7 +60,7 @@ const ContactModal = ({ isOpen, onClose, triggerRef }) => {
         }
       }
     }
-  };
+  }, [onClose]);
 
   useEffect(() => {
     if (isOpen) {
@@ -77,7 +77,7 @@ const ContactModal = ({ isOpen, onClose, triggerRef }) => {
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [isOpen, triggerRef]);
+  }, [isOpen, triggerRef, handleKeyDown]);
 
   if (!isOpen) return null;
 

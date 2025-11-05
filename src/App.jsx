@@ -8,8 +8,10 @@ function App() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
       <Header />
-      <Hero />
-      <InfoSection />
+      <main className="content-wrapper">
+        <Hero />
+        <InfoSection />
+      </main>
     </div>
   );
 }
